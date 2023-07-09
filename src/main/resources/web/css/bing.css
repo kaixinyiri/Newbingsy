@@ -1027,10 +1027,10 @@ div.markdown-body {
 
     #tail-in:has(#input:focus-visible) #restart,
     #tail-in:has(#input:hover) #restart {
-        width: 0;
-        margin: 0;
+         width: 5rem;
+        margin-right: 0.5rem;
         padding: 0;
-        opacity: 0;
+        opacity: 1;
     }
 
     .GenerateContentQuery>a>img {
@@ -1116,9 +1116,9 @@ div.markdown-body {
     #tail-in:has(#input:focus-visible) #restart,
     #tail-in:has(#input:hover) #restart {
        width: 5rem;
-    margin-right: 0.5rem;
-    padding: 0;
-    opacity: 1;
+        margin-right: 0.5rem;
+        padding: 0;
+        opacity: 1;
     }
 
     /* 聊天部分,在页面内 */
