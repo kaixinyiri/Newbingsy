@@ -16,17 +16,20 @@
     <script src="./js/NewBingGoGo.js" type="module"></script>
     <script src="./js/other/stats.js" async="async"></script>
      <script>
-    window.onload = function() {
-      // 定义点击创造力的函数
-      function clickCreative() {
-        // 获取创造力这个元素
-        var creativeButton = document.getElementById("chatTypeChoseCreate");
-        // 模拟点击事件
-        creativeButton.click();
-      }
-      // 调用函数
-      clickCreative();
-    }
+window.onload = function() {
+  // 定义点击创造力的函数
+  function clickCreative() {
+    // 获取创造力这个元素
+    var creativeButton = document.getElementById("chatTypeChoseCreate");
+    // 打印一下元素和函数
+    console.log(creativeButton);
+    console.log("clickCreative function executed");
+    // 模拟点击事件
+    creativeButton.click();
+  }
+  // 调用函数
+  clickCreative();
+}
   </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
