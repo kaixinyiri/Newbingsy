@@ -372,6 +372,21 @@ window.addEventListener('load',async ()=>{
         window.history.pushState('','',url.toString());
     }
 });
+// 获取文字元素
+let goGoSubtitle = document.getElementById("goGoSubtitle");
+// 获取回复框元素
+let chatbox = document.getElementById("chatbox");
+// 监听回复框内容变化的事件
+chatbox.addEventListener("DOMSubtreeModified", function() {
+    // 判断回复框是否为空
+    if (chatbox.innerHTML == "") {
+        // 如果为空，就隐藏文字
+        goGoSubtitle.style.display = "none";
+    } else {
+        // 如果不为空，就显示文字
+        goGoSubtitle.style.display = "block";
+    }
+});
 
 
 
