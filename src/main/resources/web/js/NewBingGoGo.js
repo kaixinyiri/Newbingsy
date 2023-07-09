@@ -209,7 +209,7 @@ window.addEventListener('load',async ()=>{
             titleManager.onSending()
         }
          isResponding = true; //添加这一行，表示正在响应中
-        send_button.value = '响应中.'; //添加这一行，把发送按钮的文本改为"响应中"
+        send_button.value = '停止响应.'; //添加这一行，把发送按钮的文本改为"响应中"
        
         chatSuggestionsManager.clear();
     }
