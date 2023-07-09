@@ -375,6 +375,7 @@ body:has(.my) #restart {
     right: 0;
     bottom: 0;
     position: absolute;
+    opacity: 1; 
 }
 
 #send:hover {
