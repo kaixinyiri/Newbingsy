@@ -1,5 +1,3 @@
-let returnMessage; //聊天返回对象，定义为一个全局变量
-
 import ChatSuggestionsWorker from './module/ChatMessage/ChatSuggestionsWorker.js'
 import CueWordWorker from './module/CueWordWorker.js'
 import ParserReturnWorker from './module/ChatMessage/ParserReturnWorker.js'
@@ -137,13 +135,11 @@ window.addEventListener('load',async ()=>{
     const restart_button = document.getElementById('restart');
     const input_text = document.getElementById('input');
     const send_button = document.getElementById('send');
-    const cancel_button = document.getElementById('cancel'); //添加一个取消按钮
 
 
     //定义需要用到的变量
-    
+    let returnMessage; //聊天返回对象
     let isSpeaking = false; //是否正在接收消息
-    let isResponding = false; //是否正在响应中，添加一个变量
     let previewMessageID = undefined; //预览消息id，如果没有预览消息就undefined
 
 
@@ -207,15 +203,12 @@ window.addEventListener('load',async ()=>{
         }else {
             titleManager.onSending()
         }
-        isResponding = true; //添加这一行，表示正在响应中
-        send_button.value = '响应中.'; //添加这一行，把发送按钮的文本改为"响应中"
-        
+        send_button.value = '响应中.';
         chatSuggestionsManager.clear();
     }
 
     /**bing回复结束 */
     function isSpeakingFinish() {
-        isResponding = false;
         send_button.value = '发送';
         titleManager.waitingNext();
         isSpeaking = false;
@@ -225,10 +218,7 @@ window.addEventListener('load',async ()=>{
      * 发送消息
      * @param text {string}
      * */
-    var buttonStatus = "block"; // a global variable to store the button status
     async function send(text) {
-        buttonStatus = "block"; // change the status to none when sending
-        document.getElementById("send").style.display = buttonStatus;
         if (isSpeaking) {
             return;
         }
@@ -280,21 +270,7 @@ window.addEventListener('load',async ()=>{
             isSpeakingFinish();
             parserReturnMessage.addError(error.message);
         }
-       // add this condition at the end of the function
-       buttonStatus = "block"; // change the status to block when responding
-       document.getElementById("send").style.display = buttonStatus;
-   }
-
-  function showSend() {
-   document.getElementById("send").style.display = "block";
-   }
-}
-
-// add this to the input element
-<input id="input" oninput="showSend()" ...>
-
-// add this to the button element
-<button id="send" onclick="send()">发送</button>
+    }
     chatSuggestionsManager.onSend = send;
 
     /**
@@ -330,7 +306,7 @@ window.addEventListener('load',async ()=>{
         }
         let text = getSendMessage();
         //清空输入框
-        input_text.value = '[';
+        input_text.value = '';
         //清空提示词
         cueWordManager.clearCutWordString();
 
@@ -347,15 +323,7 @@ window.addEventListener('load',async ()=>{
         //关闭大输入框
         inputMaxSwitch.open = false;
     }
-    send_button.onclick = ()=>{
-      if(isResponding){ //如果正在响应中，就取消响应
-        returnMessage.close();
-        isResponding = false;
-        send_button.value = '发送';
-      }else{ //如果不是正在响应中，就发送消息
-        onSend();
-      }
-   };
+    send_button.onclick = onSend;
 
 
     //开始新主题
@@ -375,7 +343,11 @@ window.addEventListener('load',async ()=>{
 
     //发送按钮出现逻辑
     function input_update_input_text_sstyle_show_update() {
-        send_button.style.opacity = '1';
+        if (getSendMessage()) {
+            send_button.style.opacity = '1';
+        } else {
+            send_button.style.opacity = '0';
+        }
     }
     input_text.addEventListener("input", ()=>{
         onPreview();
@@ -400,7 +372,6 @@ window.addEventListener('load',async ()=>{
         window.history.pushState('','',url.toString());
     }
 });
-
 
 
 
