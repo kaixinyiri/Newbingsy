@@ -225,6 +225,7 @@ window.addEventListener('load',async ()=>{
      * 发送消息
      * @param text {string}
      * */
+    var buttonStatus = "block"; // a global variable to store the button status
     async function send(text) {
         if (isSpeaking) {
             return;
@@ -277,13 +278,24 @@ window.addEventListener('load',async ()=>{
             isSpeakingFinish();
             parserReturnMessage.addError(error.message);
         }
-          // add this condition at the end of the function
-       if (document.getElementById("input").value == "发送") {
-       document.getElementById("send").style.display = "none";
-       } else {
-         document.getElementById("send").style.display = "block";
-       }
-    }
+       // add this condition at the end of the function
+       buttonStatus = "block"; // change the status to block when responding
+       document.getElementById("send").style.display = buttonStatus;
+   }
+
+  function showSend() {
+    if (document.getElementById("input").value == "") {
+      document.getElementById("send").style.display = buttonStatus; // use the status variable here
+    } else {
+      document.getElementById("send").style.display = "block";
+   }
+}
+
+// add this to the input element
+<input id="input" oninput="showSend()" ...>
+
+// add this to the button element
+<button id="send" onclick="send()">发送</button>
     chatSuggestionsManager.onSend = send;
 
     /**
