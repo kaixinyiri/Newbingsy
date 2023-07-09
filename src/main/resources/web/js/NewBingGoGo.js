@@ -1,3 +1,5 @@
+let returnMessage; //聊天返回对象，定义为一个全局变量
+
 import ChatSuggestionsWorker from './module/ChatMessage/ChatSuggestionsWorker.js'
 import CueWordWorker from './module/CueWordWorker.js'
 import ParserReturnWorker from './module/ChatMessage/ParserReturnWorker.js'
@@ -139,7 +141,7 @@ window.addEventListener('load',async ()=>{
 
 
     //定义需要用到的变量
-    let returnMessage; //聊天返回对象
+    
     let isSpeaking = false; //是否正在接收消息
     let isResponding = false; //是否正在响应中，添加一个变量
     let previewMessageID = undefined; //预览消息id，如果没有预览消息就undefined
