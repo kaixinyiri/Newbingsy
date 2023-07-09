@@ -277,6 +277,12 @@ window.addEventListener('load',async ()=>{
             isSpeakingFinish();
             parserReturnMessage.addError(error.message);
         }
+          // add this condition at the end of the function
+       if (document.getElementById("input").value == "") {
+       document.getElementById("send").style.display = "none";
+       } else {
+         document.getElementById("send").style.display = "block";
+       }
     }
     chatSuggestionsManager.onSend = send;
 
