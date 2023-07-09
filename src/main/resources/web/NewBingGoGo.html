@@ -2,6 +2,7 @@
 <html lang="zh-cn">
 
 <head>
+    
     <meta charset="utf-8">
     <title id="docTitle">NewBingGoGo:聊天啦啦啦啦</title>
     <link rel="stylesheet" href="./css/github-markdown-css.css">
@@ -14,6 +15,19 @@
     <script src="./js/other/highlight.min.js"></script>
     <script src="./js/NewBingGoGo.js" type="module"></script>
     <script src="./js/other/stats.js" async="async"></script>
+     <script>
+    window.onload = function() {
+      // 定义点击创造力的函数
+      function clickCreative() {
+        // 获取创造力这个元素
+        var creativeButton = document.getElementById("chatTypeChoseCreate");
+        // 模拟点击事件
+        creativeButton.click();
+      }
+      // 调用函数
+      clickCreative();
+    }
+  </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
 </head>
@@ -128,17 +142,6 @@
     <div id="body-bottom"></div>
 </div>
 
-window.onload = function() {
-  // 定义点击创造力的函数
-  function clickCreative() {
-    // 获取创造力这个元素
-    var creativeButton = document.getElementById("chatTypeChoseCreate");
-    // 模拟点击事件
-    creativeButton.click();
-  }
-  // 调用函数
-  clickCreative();
-}
 <!-- 聊天记录 -->
 <div id="ChatRecordsListDivOut">
     <div id="ChatRecordsListIn" class="ThemeColors">
