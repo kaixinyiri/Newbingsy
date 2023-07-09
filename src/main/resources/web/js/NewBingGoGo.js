@@ -284,7 +284,7 @@ window.addEventListener('load',async ()=>{
    }
 
   function showSend() {
-    if (document.getElementById("input").value == "") {
+    if (document.getElementById("input").value == "发送") {
       document.getElementById("send").style.display = buttonStatus; // use the status variable here
     } else {
       document.getElementById("send").style.display = "block";
