@@ -374,6 +374,7 @@ body:has(.my) #restart {
 
 #send:hover {
     background-color: #005fff80;
+    opacity: 1;
 }
 
 #input {
