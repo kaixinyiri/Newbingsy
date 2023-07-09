@@ -12,6 +12,10 @@ import ChatOptionsSets from "./module/BingChat/ChatOptionsSets.js";
 import nBGGFetch from "./module/nBGGFetch.js";
 import {LoadAnimation} from "./module/aToos/AToos.js";
 
+
+//在文件的最前面，添加一行
+let returnMessage; //聊天返回对象，定义为一个全局变量
+
 /**
  * 给bingChat加载服务器配置
  * @param bingChat {BingChat} 要加载配置的BingChat
@@ -138,7 +142,7 @@ window.addEventListener('load',async ()=>{
 
 
     //定义需要用到的变量
-    let returnMessage; //聊天返回对象
+    
     let isSpeaking = false; //是否正在接收消息
     let previewMessageID = undefined; //预览消息id，如果没有预览消息就undefined
 
@@ -323,7 +327,15 @@ window.addEventListener('load',async ()=>{
         //关闭大输入框
         inputMaxSwitch.open = false;
     }
-    send_button.onclick = onSend;
+    send_button.onclick = ()=>{
+    if(isResponding){ //如果正在响应中，就取消响应
+        returnMessage.close();
+        isResponding = false;
+        send_button.value = '发送';
+    }else{ //如果不是正在响应中，就发送消息
+        onSend();
+    }
+};
 
 
     //开始新主题
