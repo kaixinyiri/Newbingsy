@@ -227,7 +227,7 @@ window.addEventListener('load',async ()=>{
      * */
     var buttonStatus = "block"; // a global variable to store the button status
     async function send(text) {
-        buttonStatus = "none"; // change the status to none when sending
+        buttonStatus = "block"; // change the status to none when sending
         document.getElementById("send").style.display = buttonStatus;
         if (isSpeaking) {
             return;
