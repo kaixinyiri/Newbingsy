@@ -14,7 +14,7 @@ export default class ChatModeSwitchingWorker {
     chatTypeChoseAccurate; //聊天选项精确按钮
     chatTypeDiv; //全部按钮的父元素
     //默认平衡
-    _chatType = ChatModeSwitchingWorker.ChatType.Creative;
+    _chatType = ChatModeSwitchingWorker.ChatType.Balanced;
     constructor(backgroundDIV,chatTypeChoseCreate,chatTypeChoseBalance,chatTypeChoseAccurate,chatTypeDiv) {
         this.backgroundDIV = backgroundDIV;
         this.chatTypeChoseCreate = chatTypeChoseCreate;
