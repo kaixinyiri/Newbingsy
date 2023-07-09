@@ -328,7 +328,15 @@ window.addEventListener('load',async ()=>{
         //关闭大输入框
         inputMaxSwitch.open = false;
     }
-    send_button.onclick = onSend;
+    send_button.onclick = ()=>{
+      if(isResponding){ //如果正在响应中，就取消响应
+        returnMessage.close();
+        isResponding = false;
+        send_button.value = '发送';
+      }else{ //如果不是正在响应中，就发送消息
+        onSend();
+      }
+   };
 
 
     //开始新主题
