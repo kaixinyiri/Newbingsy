@@ -127,6 +127,18 @@
    
     <div id="body-bottom"></div>
 </div>
+
+window.onload = function() {
+  // 定义点击创造力的函数
+  function clickCreative() {
+    // 获取创造力这个元素
+    var creativeButton = document.getElementById("chatTypeChoseCreate");
+    // 模拟点击事件
+    creativeButton.click();
+  }
+  // 调用函数
+  clickCreative();
+}
 <!-- 聊天记录 -->
 <div id="ChatRecordsListDivOut">
     <div id="ChatRecordsListIn" class="ThemeColors">
@@ -142,15 +154,5 @@
     </div>
 </div>
 </body>
-window.onload = function() {
-  // 定义点击创造力的函数
-  function clickCreative() {
-    // 获取创造力这个元素
-    var creativeButton = document.getElementById("chatTypeChoseCreate");
-    // 模拟点击事件
-    creativeButton.click();
-  }
-  // 调用函数
-  clickCreative();
-}
+
 </html>
