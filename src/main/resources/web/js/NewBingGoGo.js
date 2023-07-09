@@ -375,11 +375,7 @@ window.addEventListener('load',async ()=>{
 
     //发送按钮出现逻辑
     function input_update_input_text_sstyle_show_update() {
-        if (getSendMessage()) {
-            send_button.style.opacity = '1';
-        } else {
-            send_button.style.opacity = '1';
-        }
+        send_button.style.opacity = '1';
     }
     input_text.addEventListener("input", ()=>{
         onPreview();
