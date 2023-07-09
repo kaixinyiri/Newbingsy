@@ -135,11 +135,13 @@ window.addEventListener('load',async ()=>{
     const restart_button = document.getElementById('restart');
     const input_text = document.getElementById('input');
     const send_button = document.getElementById('send');
+    const cancel_button = document.getElementById('cancel'); //添加一个取消按钮
 
 
     //定义需要用到的变量
     let returnMessage; //聊天返回对象
     let isSpeaking = false; //是否正在接收消息
+    let isResponding = false; //是否正在响应中，添加一个变量
     let previewMessageID = undefined; //预览消息id，如果没有预览消息就undefined
 
 
@@ -203,12 +205,15 @@ window.addEventListener('load',async ()=>{
         }else {
             titleManager.onSending()
         }
-        send_button.value = '响应中.';
+        isResponding = true; //添加这一行，表示正在响应中
+        send_button.value = '响应中.'; //添加这一行，把发送按钮的文本改为"响应中"
+        
         chatSuggestionsManager.clear();
     }
 
     /**bing回复结束 */
     function isSpeakingFinish() {
+        isResponding = false;
         send_button.value = '发送';
         titleManager.waitingNext();
         isSpeaking = false;
