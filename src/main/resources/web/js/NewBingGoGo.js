@@ -278,7 +278,7 @@ window.addEventListener('load',async ()=>{
             parserReturnMessage.addError(error.message);
         }
           // add this condition at the end of the function
-       if (document.getElementById("input").value == "") {
+       if (document.getElementById("input").value == "发送") {
        document.getElementById("send").style.display = "none";
        } else {
          document.getElementById("send").style.display = "block";
