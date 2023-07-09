@@ -286,10 +286,7 @@ window.addEventListener('load',async ()=>{
    }
 
   function showSend() {
-    if (document.getElementById("input").value == "") {
-      document.getElementById("send").style.display = buttonStatus; // use the status variable here
-    } else {
-      document.getElementById("send").style.display = "block";
+   document.getElementById("send").style.display = "block";
    }
 }
 
