@@ -330,7 +330,7 @@ window.addEventListener('load',async ()=>{
         }
         let text = getSendMessage();
         //清空输入框
-        input_text.value = '';
+        input_text.value = ' ';
         //清空提示词
         cueWordManager.clearCutWordString();
 
