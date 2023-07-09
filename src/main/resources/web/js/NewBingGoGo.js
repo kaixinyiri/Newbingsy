@@ -387,6 +387,8 @@ window.addEventListener('load',async ()=>{
         url.searchParams.delete("sendMessage");
         window.history.pushState('','',url.toString());
     }
+    //在这里添加你想要的代码
+    chatTypeChoseCreate.onclick();
 });
 
 
