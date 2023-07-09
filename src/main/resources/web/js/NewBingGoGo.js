@@ -279,7 +279,7 @@ window.addEventListener('load',async ()=>{
             parserReturnMessage.addError(error.message);
         }
        // add this condition at the end of the function
-       
+       buttonStatus = "block"; // change the status to block when responding
        document.getElementById("send").style.display = buttonStatus;
    }
 
