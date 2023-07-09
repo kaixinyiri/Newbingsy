@@ -362,7 +362,7 @@ window.addEventListener('load',async ()=>{
         if (getSendMessage()) {
             send_button.style.opacity = '1';
         } else {
-            send_button.style.opacity = '0';
+            send_button.style.opacity = '1';
         }
     }
     input_text.addEventListener("input", ()=>{
