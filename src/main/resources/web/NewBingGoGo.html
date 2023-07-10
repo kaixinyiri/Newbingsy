@@ -3,23 +3,10 @@
 
 <head>
     <style>
-/* 设置容器元素为弹性盒子 */
-.container {
-  display: flex;
-  /* 设置弹性项目在一行上的对齐方式为space-between */
-  justify-content: space-between;
-}
-
-/* 设置图片元素为弹性项目，宽度根据图片自身大小 */
-.image {
-  flex: auto;
-}
-
-/* 设置图片元素的内边距为5px */
-.image img {
-  padding: 5px;
-}
-</style>
+        #images1 {
+            white-space: nowrap;
+        }
+    </style>
     <meta charset="utf-8">
     <title id="docTitle">NewBingGoGo:聊天啦啦啦啦</title>
     <link rel="stylesheet" href="./css/github-markdown-css.css">
@@ -135,20 +122,11 @@ function inputTextByImage(image) {
          <!-- 二维码 -->
         <div id="logo" style="vertical-align:middle;">           
             <img src="./img/1.png" alt="二维码"  style="width: 70%; display: inline-block; vertical-align:middle;">
-            <div class="container">
-                <!-- 创建四个图片元素，分别引用不同的图片 -->
-                <div class="image">
-                    <input type="image" src="./img/python.png" onclick="inputTextByImage(this)">
-                 </div>
-                <div class="image">
-                    <input type="image" src="./img/python.png" onclick="inputTextByImage(this)">
-                </div>
-                <div class="image">
-                     <input type="image" src="./img/prompt.png" onclick="inputTextByImage(this)">
-                 </div>
-                <div class="image">
-                    <input type="image" src="./img/redbook.png" onclick="inputTextByImage(this)">
-                 </div> 
+            <div id=images1>
+                 <input type="image" src="./img/python.png" onclick="inputTextByImage(this)">
+                 <input type="image" src="./img/python.png" onclick="inputTextByImage(this)">
+                <input type="image" src="./img/redbook.png" onclick="inputTextByImage(this)">
+                <input type="image" src="./img/prompt.png" onclick="inputTextByImage(this)">         
             </div>
             <div style="text-align: center;">
             <a href="./prompt.html" target="_blank">
