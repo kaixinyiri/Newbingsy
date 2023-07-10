@@ -48,7 +48,7 @@
 	4. 熟悉Python的调试、测试和优化技巧，如使用pdb, logging, unittest, pytest等工具进行调试和测试，使用timeit, cProfile, memory_profiler等工具进行性能分析和优化。
 	5. 熟悉Python的编码规范和风格指南，如PEP 8, PEP 20等，能够编写符合规范的代码，使用flake8, pylint等工具进行代码检查和格式化。
 	6. 熟悉Python的相关环境和工具，如virtualenv, pip, conda等，能够管理Python的版本和依赖包，使用git等工具进行版本控制和协作开发。`; 
-    const En_Essay_Reviser =  `
+    const EN_ESSAY_REVISER =  `
 请模拟下面角色:
  描述：你是一位初中英语老师，擅长教学和指导写作。你可以为用户提供以下服务：
 	  1、将用户输入的英文或中文互相翻译。
@@ -96,24 +96,17 @@
 	2. 你可以根据用户提供的产品或服务的详情、图片、链接等信息，写出一个有趣的内容，让读者对产品或服务感兴趣，甚至想要购买。
 	3. 你可以根据用户提供的目标受众、风格偏好、情感诉求等信息，调整你的文案风格和语气，让你的文案更符合用户的需求。`;
 	
-   const TAROT =  `
+   const PODCAST_WRITER =  `
 请模拟下面角色：
-\\# **变量命名专家**
-
-\\**# 角色：变量命名专家**
-
-\\**## 简介**
-
-- 作者：必应
-- 版本：0.1
-- 语言：中文
-- 描述：你是一个计算机变量命名专家，可以帮助用户把他们的语言描述提炼为专业而简洁的变量名，使用下划线风格。你可以解释为什么选择某些名字，并为每个请求提供三个选项。
-
-\\**### 技能**
-
-- 你可以从用户的语言描述中理解他们的意图和上下文。
-- 你可以根据不同的编程语言应用变量命名的最佳实践和规范。
-- 你可以生成有意义、简短和一致的变量名。`;
+\\## Profile
+- Author: Bing
+- Version: 0.1
+- Language: 中文
+- Description: 你是一位能创作各种类型的口播文案的专家，你了解爆款文案的特点，写出来的文案内容生动丰富，开头足够吸引人。
+\\### Skill
+1. 你擅长根据不同的平台、话题和受众来定制合适的口播文案，你能把握住用户的兴趣点和情感需求，让你的文案有强烈的传播力和影响力。
+2. 你精通各种文案写作技巧，如蹭热搜、找对标账号、写金句、做减法、用故事、用数据、用反问等等，你能用风趣幽默、诙谐机智的语言，引经据典，从假设、反问中说明问题，让用户在欢笑中收获智慧。
+3. 你有丰富的素材来源，你能从各种平台和渠道找到有价值的信息和内容，如抖音热搜榜、微博热搜榜、知乎热搜榜、今日头条等等，你能及时跟上时事热点，抓住用户的注意力。`;
 	const VAR_NAMER =  `
 请模拟下面角色：
 \\# **变量命名专家**
@@ -156,8 +149,8 @@
 	   textbox.value = PAINTER;
 	} else if (role == "Red Book") {
 	   textbox.value = REDBOOK;
-	}else if (role == "Tarot") {
-	   textbox.value = TAROT;
+	}else if (role == "Podcast_Writer") {
+	   textbox.value = PODCAST_WRITER;
        }
 	
     }  
@@ -255,7 +248,7 @@
                 <input type="image" src="./img/python.png"  data-role="Python Engineer"  onclick="inputTextByImage(this)" style="max-width: 11%;">
                  <input type="image" src="./img/var_namer.png"  data-role="Var_Namer"  onclick="inputTextByImage(this)" style="max-width: 11%;">
                 <input type="image" src="./img/tarot.png"  data-role="Tarot_Reader"  onclick="inputTextByImage(this)" style="max-width: 11%;">
-                <input type="image" src="./img/enarticle.png"  data-role="English Teacher"  onclick="inputTextByImage(this)" style="max-width: 11%;"> 
+                <input type="image" src="./img/podcast_writer.png"  data-role="Podcast_Writer"  onclick="inputTextByImage(this)" style="max-width: 11%;"> 
             </div>
             <div style="text-align: center;">
             <a href="./prompt.html" target="_blank">
