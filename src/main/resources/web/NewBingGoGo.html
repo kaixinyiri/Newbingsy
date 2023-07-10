@@ -13,30 +13,18 @@
     <link rel="stylesheet" href="./css/katex.min.css">
     <link rel="stylesheet" href="./css/highlight.js.default.min.css">
     <link rel="stylesheet" href="./css/bing.css">
-        <script>	   
+    <script>	   
     // 定义一个函数，根据图片的src属性来输入不同的文字	    
     function inputTextByImage(image) {	
-        // 这里是你的函数内容
-    }
-
-    $ (function () {
-    // 获取文本框元素
-    var textbox = document.getElementById("input");
+       var textbox = document.getElementById("input");
       // 获取图片的src属性
-     var role = image.getAttribute("data-role");
+      var role = image.getAttribute("data-role");
        // 根据data-role属性来判断输入什么文字
-     if (role === "GrammarGPT") {
+      if (role === "GrammarGPT") {
         textbox.value = "1233";
-    } else if (role == "Python Engineer") {
-         textbox.value = PYTHON;
-        } else if (role == "English Teacher") {
-                textbox.value = EN-TEACHER;
-       } else if (role == "Painter") {
-                textbox.value = PATAINTER;
-       } else if (role == "RedBook") {
-                textbox.value = REDBOOK;
-       }
-  });
+    } 
+    }  
+ 
      </script>
     <script src="./js/other/marked.min.js"></script>
     <script src="./js/other/katex.min.js"></script>
