@@ -14,14 +14,15 @@
     <link rel="stylesheet" href="./css/highlight.js.default.min.css">
     <link rel="stylesheet" href="./css/bing.css">
     <script>	   
-    // 定义一个函数，根据图片的src属性来输入不同的文字	    
+    // 定义一个函数，根据图片的src属性来输入不同的文字	
+    const AB = "1233"
     function inputTextByImage(image) {	
        var textbox = document.getElementById("input");
       // 获取图片的src属性
       var role = image.getAttribute("data-role");
        // 根据data-role属性来判断输入什么文字
       if (role === "GrammarGPT") {
-        textbox.value = "1233";
+        textbox.value = AB;
     } 
     }  
  
