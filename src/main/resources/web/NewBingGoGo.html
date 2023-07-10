@@ -21,9 +21,9 @@ function inputTextByImage(image) {
   // 获取文本框元素
   var textbox = document.getElementById("input");
   // 获取图片的src属性
-  var src = image.src;
+  var src = image.getAttribute("src");
   // 根据src属性来判断输入什么文字
-  if (src == "https://github.com/kaixinyiri/NewBingGoGo-Web/blob/master/src/main/resources/web/img/3.png") {
+  if (src === "./img/3.png") {
     textbox.value = "1222222";
   } else if (src == "https://example.com/image2.jpg") {
     textbox.value = "这是图片二";
