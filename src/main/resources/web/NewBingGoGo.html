@@ -118,7 +118,22 @@ function inputTextByImage(image) {
          <!-- 二维码 -->
         <div id="logo" style="vertical-align:middle;">           
             <img src="./img/1.png" alt="二维码"  style="width: 70%; display: inline-block; vertical-align:middle;">
-            <input type="image" src="./img/3.png" onclick="inputTextByImage(this)">
+            <div class="container">
+  <!-- 创建四个图片元素，分别引用不同的图片 -->
+  <div class="image">
+   <input type="image" src="./img/python.png" onclick="inputTextByImage(this)">
+  </div>
+  <div class="image">
+     <input type="image" src="./img/python.png" onclick="inputTextByImage(this)">
+  </div>
+  <div class="image">
+    <input type="image" src="./img/prompt.png" onclick="inputTextByImage(this)">
+  </div>
+  <div class="image">
+    <input type="image" src="./img/redbook.png" onclick="inputTextByImage(this)">
+  </div>
+</div>
+            
             <a href="./prompt.html" target="_blank">
              <img src="./img/3.png" alt="二维码"  style="width: 70%; display: inline-block; vertical-align:middle;">
              </a>   
