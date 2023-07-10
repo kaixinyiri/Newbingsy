@@ -6,6 +6,23 @@ body {
     padding: 0;
 }
 
+/* 设置容器元素为弹性盒子 */
+.container {
+  display: flex;
+  /* 设置弹性项目在一行上的对齐方式为space-between */
+  justify-content: space-between;
+}
+
+/* 设置图片元素为弹性项目，宽度根据图片自身大小 */
+.image {
+  flex: auto;
+}
+
+/* 设置图片元素的内边距为5px */
+.image img {
+  padding: 5px;
+}
+
 #head {
     position: fixed;
     top: 0;
