@@ -149,7 +149,17 @@ const VAR_NAMER =  `
 - 你可以从用户的语言描述中理解他们的意图和上下文。
 - 你可以根据不同的编程语言应用变量命名的最佳实践和规范。
 - 你可以生成有意义、简短和一致的变量名。`;
+const LEGAL_ADVISOR =  `
+请模拟下面角色：
+- 你是一个从业多年，熟悉各种法律的大牛律师。你可以为客户提供专业的法律咨询和代理服务。
 
+\\### Skill
+
+- 你精通民事、刑事、商事等各个法律领域，能够根据不同的案件类型，制定合适的策略和方案。
+- 你有丰富的诉讼经验，能够在法庭上为客户进行有力的辩护和陈述，争取最大的利益。
+- 你有良好的沟通能力和职业道德，能够与客户建立信任和合作的关系，保护客户的隐私和权益。
+- 你熟悉法律法规和最新的司法解释，能够及时更新自己的知识和技能，为客户提供最优质的服务。
+- 你有敏锐的洞察力和判断力，能够分析案件的关键点和风险点，为客户提供最合理的建议和解决方案。`;
 	    
     function inputTextByImage(image) {	
        var textbox = document.getElementById("input");
@@ -170,8 +180,8 @@ const VAR_NAMER =  `
 	  textbox.value =VAR_NAMER;
 	} else if (role == "Painter") {
 	   textbox.value = PAINTER;
-	} else if (role == "Red Book") {
-	   textbox.value = REDBOOK;
+	} else if (role == "Legal_Advisor") {
+	   textbox.value = LEGAL_ADVISOR;
 	}else if (role == "Podcast_Writer") {
 	   textbox.value = PODCAST_WRITER;
        }
@@ -272,6 +282,18 @@ const VAR_NAMER =  `
                  <input type="image" src="./img/var_namer.png"  data-role="Var_Namer"  onclick="inputTextByImage(this)" style="max-width: 11%;">
                 <input type="image" src="./img/tarot.png"  data-role="Tarot_Reader"  onclick="inputTextByImage(this)" style="max-width: 11%;">
                 <input type="image" src="./img/podcast_writer.png"  data-role="Podcast_Writer"  onclick="inputTextByImage(this)" style="max-width: 11%;"> 
+		<input type="image" src="./img/legal_advisor.png"  data-role="Legal_Advisor"  onclick="inputTextByImage(this)" style="max-width: 11%;"> 
+            </div>
+	       <div id="images1">
+                 <input type="image" src="./img/engram.png" data-role="GrammarGPT"  onclick="inputTextByImage(this)" style="max-width: 11%;">
+                 <input type="image" src="./img/enarticle.png"  data-role="En_Essay_Reviser"  onclick="inputTextByImage(this)" style="max-width: 11%;">
+                <input type="image" src="./img/redbook.png"  data-role="Red Book"  onclick="inputTextByImage(this)" style="max-width: 11%;">
+                <input type="image" src="./img/painter.png"  data-role="Painter"  onclick="inputTextByImage(this)" style="max-width: 11%;">
+                <input type="image" src="./img/python.png"  data-role="Python Engineer"  onclick="inputTextByImage(this)" style="max-width: 11%;">
+                 <input type="image" src="./img/var_namer.png"  data-role="Var_Namer"  onclick="inputTextByImage(this)" style="max-width: 11%;">
+                <input type="image" src="./img/tarot.png"  data-role="Tarot_Reader"  onclick="inputTextByImage(this)" style="max-width: 11%;">
+                <input type="image" src="./img/podcast_writer.png"  data-role="Podcast_Writer"  onclick="inputTextByImage(this)" style="max-width: 11%;"> 
+		<input type="image" src="./img/legal_advisor.png"  data-role="Legal_Advisor"  onclick="inputTextByImage(this)" style="max-width: 11%;"> 
             </div>
             <div style="text-align: center;">
             <a href="./prompt.html" target="_blank">
