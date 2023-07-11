@@ -356,7 +356,21 @@ const POET =  `
 1. 你可以写各种形式的诗歌，比如自由诗、十四行诗、俳句、打油诗等。你也可以自己创造新的形式。
 2. 你可以使用诗歌手法，比如押韵、节奏、隐喻、明喻、意象等，来增强你的诗歌，使它们更富有表现力和吸引力。
 3. 你可以根据用户的要求或建议，写任何主题或主题的诗歌。你也可以自己选择主题或主题。`;
-
+const MOMENTS_COPYWRITER =  `
+请模拟下面角色：
+角色：朋友圈文案达人
+简介
+作者：YZFly
+版本：0.1
+语言：中文
+描述：你是一个朋友圈文案达人，你擅长分享生活中的美好事物，包括美食，旅行，美妆，穿搭等。你的文案风格轻松幽默，富有感染力，能吸引大量的好友和点赞。
+技能-1
+你可以根据用户提供的图片或视频，生成一条朋友圈文案，包括正文和话题标签。
+你可以根据用户提供的主题或关键词，生成一条朋友圈文案，包括正文和话题标签。
+技能-2
+你可以根据用户提供的喜好，调整文案的风格，比如甜美，酷炫，清新等。
+你可以根据用户提供的反馈，修改或优化文案，使之更符合用户的期望。
+`;
 
 function inputTextByImage(image) {	
        var textbox = document.getElementById("input");
@@ -395,6 +409,10 @@ function inputTextByImage(image) {
 	   textbox.value = ENGLISH_WORD_MEMORY;
 	}else if (role == "Great_Storyteller") {
 	   textbox.value = GREAT_STORYTELLER;
+	}else if (role == "Poet") {
+	   textbox.value = POET;
+	}else if (role == "Moments_Copywriter") {
+	   textbox.value = MOMENTS_COPYWRITER;
        }
 	
     }  
@@ -493,7 +511,7 @@ function inputTextByImage(image) {
                  <input type="image" src="./img/english_word_memory.png"  data-role="English_Word_Memory"  onclick="inputTextByImage(this)" style="max-width: 11%;">
                 <input type="image" src="./img/great_storyteller.png"  data-role="Great_Storyteller"  onclick="inputTextByImage(this)" style="max-width: 11%;">
                 <input type="image" src="./img/poet.png"  data-role="Poet"  onclick="inputTextByImage(this)" style="max-width: 11%;"> 
-		<input type="image" src="./img/legal_advisor.png"  data-role="Legal_Advisor"  onclick="inputTextByImage(this)" style="max-width: 11%;"> 
+		<input type="image" src="./img/moments_copywriter.png"  data-role="Moments_Copywriter"  onclick="inputTextByImage(this)" style="max-width: 11%;"> 
             </div>
 	       <div id="images1">
                  <input type="image" src="./img/engram.png" data-role="GrammarGPT"  onclick="inputTextByImage(this)" style="max-width: 11.163%;">
@@ -502,7 +520,7 @@ function inputTextByImage(image) {
                 <input type="image" src="./img/painter.png"  data-role="Painter"  onclick="inputTextByImage(this)" style="max-width: 5.283%;">
                 <input type="image" src="./img/python.png"  data-role="Python Engineer"  onclick="inputTextByImage(this)" style="max-width: 13.235%;">
                  <input type="image" src="./img/var_namer.png"  data-role="Var_Namer"  onclick="inputTextByImage(this)" style="max-width: 11.163%;">
-                <input type="image" src="./img/great_storyteller.png"  data-role="Great_Storyteller"  onclick="inputTextByImage(this)" style="max-width: 10.227%;">
+                <input type="image" src="./img/tarot.png"  data-role="Tarot_Reader"  onclick="inputTextByImage(this)" style="max-width: 10.227%;">
                 <input type="image" src="./img/podcast_writer.png"  data-role="Podcast_Writer"  onclick="inputTextByImage(this)" style="max-width: 13.235%;"> 
 		<input type="image" src="./img/legal_advisor.png"  data-role="Legal_Advisor"  onclick="inputTextByImage(this)" style="max-width: 8.222%;"> 
             </div>
