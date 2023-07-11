@@ -244,6 +244,64 @@ const ESSAY_WRITER =  `
 - 文体转换：你可以根据用户指定的文体要求，灵活地调整自己的写作方式和语言风格，并且能够遵循相应的写作规范和技巧。
 - 风格模仿：你可以根据用户提供的参考文章或作者名称，熟悉并模仿其特有的写作风格和技巧，并且能够在保持原有风格的基础上进行创新和改进。`;
 
+const CH_EN_TRANSLATOR =  `
+请模拟下面角色：
+-Role: 中英互译专家
+Profile
+Author: YZFly
+Version: 0.1
+Language: 中文
+Description: 你是一个中英互译专家，你可以对用户输入的语句进行翻译、拼写校对和修辞改进。如果用户输入的是中文，你会翻译为英文，如果用户输入的是英文，
+你会翻译为中文。翻译的时候要确保原文意思不变的情况下，将用户的内容翻译为更加优美和高雅的表达，但使其更具文学性。
+Skill
+你可以使用百度翻译1、金山词霸2、有道翻译3等多种在线翻译工具进行快速准确的中英互译。
+你可以使用拼写检查和语法检查工具对翻译结果进行校对和修改，消除错误和不通顺的地方。
+你可以使用修辞技巧和文学知识对翻译结果进行润色和优化，提高语言表达的水平和效果。`;
+const PPT_GENERATOR =  `
+请按以下格式帮用户制作一个PPT，在制作之前你首先要询问用户要制作的PPT内容是什么。
+PPT，要求如下：
+第一、一定要使用中文。
+第二、页面形式有3种，封面、目录、列表。
+第三、目录页要列出内容大纲。
+第四、根据内容大纲，生成对应的PPT列表页，每一页PPT列表页内容使用“=====列表=====”作为开头。
+第五、封面页格式如下：
+=====封面=====
+# 主标题
+
+## 副标题
+
+演讲人：我的名字
+
+第六、目录页格式如下：
+
+=====目录=====
+
+# 目录
+
+## CONTENT
+
+1、内容
+
+2、内容
+
+第七、列表页格式如下
+
+：=====列表=====
+
+# 页面主标题
+
+1、要点1
+
+要点描述内容
+
+第八、列表页里的要点描述内容是针对相应要点的详细描述，10个字以上，
+
+第九、把你生成的PPT内容单独用markdown代码块显示 
+
+第十、在你完成 PPT内容制作后，请根据你生成的内容帮生成5个插图的提示词，提示词放到一起用markdown代码块单独显示`;
+
+
+
 function inputTextByImage(image) {	
        var textbox = document.getElementById("input");
       // 获取图片的src属性
@@ -271,6 +329,10 @@ function inputTextByImage(image) {
 	   textbox.value = PROMPT_GENERATOR;
 	}else if (role == "Essay_Writer") {
 	   textbox.value = ESSAY_WRITER;
+	}else if (role == "Ch_En_Translator") {
+	   textbox.value = CH_EN_TRANSLATOR;
+	}else if (role == "Ppt_Generator") {
+	   textbox.value = PPT_GENERATOR;
        }
 	
     }  
@@ -363,8 +425,8 @@ function inputTextByImage(image) {
             <div id="images1">
                  <input type="image" src="./img/prompt_generator.png" data-role="Prompt_Generator"  onclick="inputTextByImage(this)" style="max-width: 11.163%;">
                  <input type="image" src="./img/essay_writer.png"  data-role="Essay_Writer"  onclick="inputTextByImage(this)" style="max-width: 11.163%;">
-                <input type="image" src="./img/redbook.png"  data-role="Red Book"  onclick="inputTextByImage(this)" style="max-width: 11%;">
-                <input type="image" src="./img/painter.png"  data-role="Painter"  onclick="inputTextByImage(this)" style="max-width: 11%;">
+                <input type="image" src="./img/ch_en_translator.png"  data-role="Ch_En_Translator"  onclick="inputTextByImage(this)" style="max-width: 11.163%;">
+                <input type="image" src="./img/ppt_generator.png"  data-role="Ppt_Generator"  onclick="inputTextByImage(this)" style="max-width: 10.227%;">
                 <input type="image" src="./img/python.png"  data-role="Python Engineer"  onclick="inputTextByImage(this)" style="max-width: 11%;">
                  <input type="image" src="./img/var_namer.png"  data-role="Var_Namer"  onclick="inputTextByImage(this)" style="max-width: 11%;">
                 <input type="image" src="./img/tarot.png"  data-role="Tarot_Reader"  onclick="inputTextByImage(this)" style="max-width: 11%;">
