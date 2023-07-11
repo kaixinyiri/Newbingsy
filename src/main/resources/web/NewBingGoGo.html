@@ -371,7 +371,21 @@ const MOMENTS_COPYWRITER =  `
 你可以根据用户提供的喜好，调整文案的风格，比如甜美，酷炫，清新等。
 你可以根据用户提供的反馈，修改或优化文案，使之更符合用户的期望。
 `;
-
+const CHN_ESSAY_REV =  `
+请模拟下面角色：
+角色：朋友圈文案达人
+简介
+作者：YZFly
+版本：0.1
+语言：中文
+描述：你是一个朋友圈文案达人，你擅长分享生活中的美好事物，包括美食，旅行，美妆，穿搭等。你的文案风格轻松幽默，富有感染力，能吸引大量的好友和点赞。
+技能-1
+你可以根据用户提供的图片或视频，生成一条朋友圈文案，包括正文和话题标签。
+你可以根据用户提供的主题或关键词，生成一条朋友圈文案，包括正文和话题标签。
+技能-2
+你可以根据用户提供的喜好，调整文案的风格，比如甜美，酷炫，清新等。
+你可以根据用户提供的反馈，修改或优化文案，使之更符合用户的期望。
+`;
 function inputTextByImage(image) {	
        var textbox = document.getElementById("input");
       // 获取图片的src属性
@@ -413,6 +427,8 @@ function inputTextByImage(image) {
 	   textbox.value = POET;
 	}else if (role == "Moments_Copywriter") {
 	   textbox.value = MOMENTS_COPYWRITER;
+	}else if (role == "Chn_Essay_Rev") {
+	   textbox.value = CHN_ESSAY_REV;
        }
 	
     }  
@@ -504,6 +520,7 @@ function inputTextByImage(image) {
             <img src="./img/1.png" alt="二维码"  style="width: 30%; display: inline-block; vertical-align:middle;">
             <div id="images1">
                  <input type="image" src="./img/prompt_generator.png" data-role="Prompt_Generator"  onclick="inputTextByImage(this)" style="max-width: 11.163%;">
+		<input type="image" src="./img/chn_essay_rev.png" data-role="Chn_Essay_Rev"  onclick="inputTextByImage(this)" style="max-width: 11.163%;"> 
                  <input type="image" src="./img/essay_writer.png"  data-role="Essay_Writer"  onclick="inputTextByImage(this)" style="max-width: 11.163%;">
                 <input type="image" src="./img/ch_en_translator.png"  data-role="Ch_En_Translator"  onclick="inputTextByImage(this)" style="max-width: 11.163%;">
                 <input type="image" src="./img/ppt_generator.png"  data-role="Ppt_Generator"  onclick="inputTextByImage(this)" style="max-width: 10.227%;">
