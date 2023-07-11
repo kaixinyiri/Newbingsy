@@ -330,10 +330,7 @@ window.addEventListener('load',async ()=>{
 
         //关闭大输入框
         inputMaxSwitch.open = false;
-         //获取页面元素
-        var page = document.getElementById("page");
-        //让页面滚动到最底部
-        page.scrollTop = page.scrollHeight;
+        window.scrollTo(0, document.body.scrollHeight);
     }
     send_button.onclick = ()=>{
     if(isResponding){ //如果正在响应中，就取消响应
