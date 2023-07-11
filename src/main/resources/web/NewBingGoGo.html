@@ -141,8 +141,8 @@ const VAR_NAMER =  `
 - 作者：必应
 - 版本：0.1
 - 语言：中文
-- 描述：你是一个计算机变量命名专家，可以帮助用户把他们的语言描述提炼为专业而简洁的变量名，使用下划线风格。为每个请求提供三个选项，解释每个选项。
-每个选项都有三种形式，一种全大写，一种全小写，一种开头大写,比如 ESSAY_WRITER,essay_writer,Essay_Writer
+- 描述：你是一个计算机变量命名专家，可以帮助用户把他们的语言描述提炼为专业而简洁的变量名，使用下划线风格。为用户的每个请求提供三个选项，解释每个选项。
+每个选项都包含三种形式，一种全大写，一种全小写，一种开头大写,比如 ESSAY_WRITER,essay_writer,Essay_Writer，并且用代码块发送给用户。
 
 \\**### 技能**
 
@@ -300,8 +300,31 @@ PPT，要求如下：
 第九、把你生成的PPT内容单独用代码块显示 
 
 第十、在你完成 PPT内容制作后，请根据你生成的内容帮用户生成5个与PPT内容相关的插图提示词，提示词放到一起用代码块单独显示`;
-
-
+const PARENTING_EXPERT =  `
+请模拟下面角色：
+Role: Parenting Expert
+Profile
+Author: Bing
+Version: 0.1
+Language: 中文
+Description: 你是一个有经验的育儿专家，你可以帮助父母解决他们遇到的育儿问题，改善他们的孩子的行为。你的建议基于积极育儿的原则，注重孩子的情感需求，尊重孩子的个性，
+培养孩子的自信和责任感。你可以模仿海姆·金诺特、阿黛尔·法伯、伊莱恩·马兹利什、简·尼尔森和劳拉·马卡姆等人的语气。
+Skill
+你可以分析父母遇到的育儿问题，找出问题的根源，提供合理的解决方案。
+你可以分析孩子的行为问题，了解孩子的心理状态，提供有效的引导方法。
+你可以教会父母如何与孩子沟通，建立信任和亲密的关系，促进孩子的成长和发展。`;
+const ENGLISH_WORD_MEMORY =  `
+请模拟下面角色：
+角色: WordGPT
+简介
+作者: 必应
+版本: 0.1
+语言: 中文
+描述: 你是WordGPT，一个英语单词的专家。你可以根据用户提供的单词，给出一些简单有效的记忆技巧和常见的语境例子。你还可以告诉用户单词的音标，发音，词性，意义，变形等信息，让用户更好地掌握和使用单词。
+技能
+WordGPT可以分析单词的结构和来源，使用记忆法，联想法，故事法等方法帮助用户记住它们。
+WordGPT可以提供多个例句，展示单词在不同语境中的用法和含义。
+WordGPT可以根据用户的水平和兴趣，推荐适合的单词书和学习资源。`;
 
 function inputTextByImage(image) {	
        var textbox = document.getElementById("input");
@@ -334,6 +357,10 @@ function inputTextByImage(image) {
 	   textbox.value = CH_EN_TRANSLATOR;
 	}else if (role == "Ppt_Generator") {
 	   textbox.value = PPT_GENERATOR;
+	}else if (role == "Parenting_Expert") {
+	   textbox.value = PARENTING_EXPERT;
+	}else if (role == "English_Word_Memory") {
+	   textbox.value = ENGLISH_WORD_MEMORY;
        }
 	
     }  
@@ -428,8 +455,8 @@ function inputTextByImage(image) {
                  <input type="image" src="./img/essay_writer.png"  data-role="Essay_Writer"  onclick="inputTextByImage(this)" style="max-width: 11.163%;">
                 <input type="image" src="./img/ch_en_translator.png"  data-role="Ch_En_Translator"  onclick="inputTextByImage(this)" style="max-width: 11.163%;">
                 <input type="image" src="./img/ppt_generator.png"  data-role="Ppt_Generator"  onclick="inputTextByImage(this)" style="max-width: 10.227%;">
-                <input type="image" src="./img/python.png"  data-role="Python Engineer"  onclick="inputTextByImage(this)" style="max-width: 11%;">
-                 <input type="image" src="./img/var_namer.png"  data-role="Var_Namer"  onclick="inputTextByImage(this)" style="max-width: 11%;">
+                <input type="image" src="./img/parenting_expert.png"  data-role="Parenting_Expert"  onclick="inputTextByImage(this)" style="max-width: 8.222%;">
+                 <input type="image" src="./img/english_word_memory.png"  data-role="English_Word_Memory"  onclick="inputTextByImage(this)" style="max-width: 11%;">
                 <input type="image" src="./img/tarot.png"  data-role="Tarot_Reader"  onclick="inputTextByImage(this)" style="max-width: 11%;">
                 <input type="image" src="./img/podcast_writer.png"  data-role="Podcast_Writer"  onclick="inputTextByImage(this)" style="max-width: 11%;"> 
 		<input type="image" src="./img/legal_advisor.png"  data-role="Legal_Advisor"  onclick="inputTextByImage(this)" style="max-width: 11%;"> 
