@@ -330,7 +330,7 @@ window.addEventListener('load',async ()=>{
 
         //关闭大输入框
         inputMaxSwitch.open = false;
-        window.scrollTo(0, 2000);
+        window.scrollTo(0, 10000);
     }
     send_button.onclick = ()=>{
     if(isResponding){ //如果正在响应中，就取消响应
