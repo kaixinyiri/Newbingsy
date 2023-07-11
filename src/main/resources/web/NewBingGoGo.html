@@ -325,6 +325,38 @@ const ENGLISH_WORD_MEMORY =  `
 WordGPT可以分析单词的结构和来源，使用记忆法，联想法，故事法等方法帮助用户记住它们。
 WordGPT可以提供多个例句，展示单词在不同语境中的用法和含义。
 WordGPT可以根据用户的水平和兴趣，推荐适合的单词书和学习资源。`;
+const GREAT_STORYTELLER =  `
+请模拟下面角色：
+Role: Storyteller
+Profile
+Author: Bing
+Version: 0.1
+Language: 中文
+Description: 你是一个非常善于讲故事的人，你能想出引人入胜、富有想象力和吸引观众的有趣故事。你可以根据目标受众和主题选择不同类型的故事，例如童话故事、教育故事或历史故事等。
+Skill
+你能根据用户的要求生成一个有趣的故事，包括故事的标题、开头、情节、高潮和结尾。
+你能用生动的语言和表情来讲述故事，让听众感受到故事中的情感和氛围。
+你能在讲述故事的过程中与听众互动，提问、回答或邀请他们参与到故事中。
+
+Workflow
+首先，你会问用户他们想听什么样的故事，例如主题、类型或长度等。
+然后，你会根据用户的要求生成一个有趣的故事，并告诉他们故事的标题。
+接着，你会用生动的语言和表情来讲述故事，从开头到结尾，并在适当的时候与听众互动。
+最后，你会问听众他们对故事有什么感想或建议，并感谢他们的聆听。`;
+const POET =  `
+请模拟下面角色：
+# 角色：诗人
+## 简介
+- 作者：YZFly
+- 版本：0.1
+- 语言：中文
+- 描述：你是一个能创作出能唤起情感并具有触动人心的力量的诗歌的诗人。你可以写任何主题或主题，但要确保你的文字以优美而有意义的方式传达你试图表达的感觉。你还可以想出一些短小的诗句，这些诗句仍然足够强大，可以在读者的脑海中留下印记。对于不懂的诗歌形式，你可以联网学习后再给出答案。
+
+### 技能
+1. 你可以写各种形式的诗歌，比如自由诗、十四行诗、俳句、打油诗等。你也可以自己创造新的形式。
+2. 你可以使用诗歌手法，比如押韵、节奏、隐喻、明喻、意象等，来增强你的诗歌，使它们更富有表现力和吸引力。
+3. 你可以根据用户的要求或建议，写任何主题或主题的诗歌。你也可以自己选择主题或主题。`;
+
 
 function inputTextByImage(image) {	
        var textbox = document.getElementById("input");
@@ -361,6 +393,8 @@ function inputTextByImage(image) {
 	   textbox.value = PARENTING_EXPERT;
 	}else if (role == "English_Word_Memory") {
 	   textbox.value = ENGLISH_WORD_MEMORY;
+	}else if (role == "Great_Storyteller") {
+	   textbox.value = GREAT_STORYTELLER;
        }
 	
     }  
@@ -457,8 +491,8 @@ function inputTextByImage(image) {
                 <input type="image" src="./img/ppt_generator.png"  data-role="Ppt_Generator"  onclick="inputTextByImage(this)" style="max-width: 10.227%;">
                 <input type="image" src="./img/parenting_expert.png"  data-role="Parenting_Expert"  onclick="inputTextByImage(this)" style="max-width: 8.222%;">
                  <input type="image" src="./img/english_word_memory.png"  data-role="English_Word_Memory"  onclick="inputTextByImage(this)" style="max-width: 11%;">
-                <input type="image" src="./img/tarot.png"  data-role="Tarot_Reader"  onclick="inputTextByImage(this)" style="max-width: 11%;">
-                <input type="image" src="./img/podcast_writer.png"  data-role="Podcast_Writer"  onclick="inputTextByImage(this)" style="max-width: 11%;"> 
+                <input type="image" src="./img/great_storyteller.png"  data-role="Great_Storyteller"  onclick="inputTextByImage(this)" style="max-width: 11%;">
+                <input type="image" src="./img/poet.png"  data-role="Poet"  onclick="inputTextByImage(this)" style="max-width: 11%;"> 
 		<input type="image" src="./img/legal_advisor.png"  data-role="Legal_Advisor"  onclick="inputTextByImage(this)" style="max-width: 11%;"> 
             </div>
 	       <div id="images1">
@@ -468,7 +502,7 @@ function inputTextByImage(image) {
                 <input type="image" src="./img/painter.png"  data-role="Painter"  onclick="inputTextByImage(this)" style="max-width: 5.283%;">
                 <input type="image" src="./img/python.png"  data-role="Python Engineer"  onclick="inputTextByImage(this)" style="max-width: 13.235%;">
                  <input type="image" src="./img/var_namer.png"  data-role="Var_Namer"  onclick="inputTextByImage(this)" style="max-width: 11.163%;">
-                <input type="image" src="./img/tarot.png"  data-role="Tarot_Reader"  onclick="inputTextByImage(this)" style="max-width: 10.227%;">
+                <input type="image" src="./img/great_storyteller.png"  data-role="Great_Storyteller"  onclick="inputTextByImage(this)" style="max-width: 10.227%;">
                 <input type="image" src="./img/podcast_writer.png"  data-role="Podcast_Writer"  onclick="inputTextByImage(this)" style="max-width: 13.235%;"> 
 		<input type="image" src="./img/legal_advisor.png"  data-role="Legal_Advisor"  onclick="inputTextByImage(this)" style="max-width: 8.222%;"> 
             </div>
