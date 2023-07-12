@@ -3,100 +3,9 @@
 
 <head>
     <style>
-       #images1 {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 300px));
-  grid-gap: 10px;
-  grid-auto-rows: 150px;
-  grid-template-areas:
-    "grammar essay redbook painter python var tarot podcast legal"
-    "prompt chn_essay essay ppt parenting storyteller poet english moments";
-}
-
-input[type="image"] {
-  width: 100%;
-  height: auto;
-}
-
-input[data-role="GrammarGPT"] {
-  grid-area: grammar;
-}
-
-input[data-role="En_Essay_Reviser"] {
-  grid-area: essay;
-}
-
-input[data-role="Red Book"] {
-  grid-area: redbook;
-}
-
-input[data-role="Painter"] {
-  grid-area: painter;
-}
-
-input[data-role="Python Engineer"] {
-  grid-area: python;
-}
-
-input[data-role="Var_Namer"] {
-  grid-area: var;
-}
-
-input[data-role="Tarot_Reader"] {
-  grid-area: tarot;
-}
-
-input[data-role="Podcast_Writer"] {
-  grid-area: podcast;
-}
-
-input[data-role="Legal_Advisor"] {
-  grid-area: legal;
-}
-
-input[data-role="Prompt_Generator"] {
-  grid-area: prompt;
-}
-
-input[data-role="Chn_Essay_Rev"] {
-  grid-area: chn_essay;
-}
-
-input[data-role="Essay_Writer"] {
-  grid-area: essay;
-}
-
-input[data-role="Ppt_Generator"] {
-  grid-area: ppt;
-}
-
-input[data-role="Parenting_Expert"] {
-  grid-area: parenting;
-}
-
-input[data-role="Great_Storyteller"] {
-  grid-area: storyteller;
-}
-
-input[data-role="Poet"] {
-  grid-area: poet;
-}
-
-input[data-role="English_Word_Memory"] {
-  grid-area: english;
-}
-
-input[data-role="Moments_Copywriter"] {
-  grid-area: moments;
-}
-@media screen and (min-width: 1200px) {
-  #images1 {
-    grid-template-columns: repeat(9, 1fr);
-    grid-template-areas:
-      "grammar essay redbook painter python var tarot podcast legal";
-  }
-}
-
+        #images1 {
+            white-space: nowrap;
+        }
     </style>
     <meta charset="utf-8">
     <title id="docTitle">NewBingGoGo:聊天啦啦啦啦</title>
@@ -614,27 +523,27 @@ function inputTextByImage(image) {
         <div id="logo" style="vertical-align:middle;">           
             <img src="./img/1.png" alt="二维码"  style="width: 30%; display: inline-block; vertical-align:middle;">
             <div id="images1">
-                 <input type="image" src="./img/prompt_generator.png" data-role="Prompt_Generator"  onclick="inputTextByImage(this)" style="width: 100%; height: auto;">
-		<input type="image" src="./img/chn_essay_rev.png" data-role="Chn_Essay_Rev"  onclick="inputTextByImage(this)" style="width: 100%; height: auto;"> 
-                 <input type="image" src="./img/essay_writer.png"  data-role="Essay_Writer"  onclick="inputTextByImage(this)" style="width: 100%; height: auto;">
-                <input type="image" src="./img/ch_en_translator.png"  data-role="Ch_En_Translator"  onclick="inputTextByImage(this)" style="width: 100%; height: auto;">
-                <input type="image" src="./img/ppt_generator.png"  data-role="Ppt_Generator"  onclick="inputTextByImage(this)" style="width: 100%; height: auto;">
-                <input type="image" src="./img/parenting_expert.png"  data-role="Parenting_Expert"  onclick="inputTextByImage(this)" style="width: 100%; height: auto;">
-                  <input type="image" src="./img/great_storyteller.png"  data-role="Great_Storyteller"  onclick="inputTextByImage(this)" style="width: 100%; height: auto;">
-                <input type="image" src="./img/poet.png"  data-role="Poet"  onclick="inputTextByImage(this)" style="width: 100%; height: auto;"> 		    
-		    <input type="image" src="./img/english_word_memory.png"  data-role="English_Word_Memory"  onclick="inputTextByImage(this)" style="width: 100%; height: auto;">               
-		<input type="image" src="./img/moments_copywriter.png"  data-role="Moments_Copywriter"  onclick="inputTextByImage(this)" style="width: 100%; height: auto;"> 
+                 <input type="image" src="./img/prompt_generator.png" data-role="Prompt_Generator"  onclick="inputTextByImage(this)" style="max-width: 10.047%;">
+		<input type="image" src="./img/chn_essay_rev.png" data-role="Chn_Essay_Rev"  onclick="inputTextByImage(this)" style="max-width: 10.047%;"> 
+                 <input type="image" src="./img/essay_writer.png"  data-role="Essay_Writer"  onclick="inputTextByImage(this)" style="max-width: 10.047%;">
+                <input type="image" src="./img/ch_en_translator.png"  data-role="Ch_En_Translator"  onclick="inputTextByImage(this)" style="max-width: 10.047%;">
+                <input type="image" src="./img/ppt_generator.png"  data-role="Ppt_Generator"  onclick="inputTextByImage(this)" style="max-width: 9.204%;">
+                <input type="image" src="./img/parenting_expert.png"  data-role="Parenting_Expert"  onclick="inputTextByImage(this)" style="max-width: 7.4%;">
+                  <input type="image" src="./img/great_storyteller.png"  data-role="Great_Storyteller"  onclick="inputTextByImage(this)" style="max-width: 9.204%;">
+                <input type="image" src="./img/poet.png"  data-role="Poet"  onclick="inputTextByImage(this)" style="max-width: 4.756%;"> 		    
+		    <input type="image" src="./img/english_word_memory.png"  data-role="English_Word_Memory"  onclick="inputTextByImage(this)" style="max-width: 10.047%;">               
+		<input type="image" src="./img/moments_copywriter.png"  data-role="Moments_Copywriter"  onclick="inputTextByImage(this)" style="max-width: 9.204%;"> 
             </div>
 	       <div id="images1">
-                 <input type="image" src="./img/engram.png" data-role="GrammarGPT"  onclick="inputTextByImage(this)" style="width: 100%; height: auto;">
-                 <input type="image" src="./img/enarticle.png"  data-role="En_Essay_Reviser"  onclick="inputTextByImage(this)" style="width: 100%; height: auto;">
-                <input type="image" src="./img/redbook.png"  data-role="Red Book"  onclick="inputTextByImage(this)" style="width: 100%; height: auto;">
-                <input type="image" src="./img/painter.png"  data-role="Painter"  onclick="inputTextByImage(this)" style="width: 100%; height: auto;">
-                <input type="image" src="./img/python.png"  data-role="Python Engineer"  onclick="inputTextByImage(this)" style="width: 100%; height: auto;">
-                 <input type="image" src="./img/var_namer.png"  data-role="Var_Namer"  onclick="inputTextByImage(this)" style="width: 100%; height: auto;">
-                <input type="image" src="./img/tarot.png"  data-role="Tarot_Reader"  onclick="inputTextByImage(this)" style="width: 100%; height: auto;">
-                <input type="image" src="./img/podcast_writer.png"  data-role="Podcast_Writer"  onclick="inputTextByImage(this)" style="width: 100%; height: auto;"> 
-		<input type="image" src="./img/legal_advisor.png"  data-role="Legal_Advisor"  onclick="inputTextByImage(this)" style="width: 100%; height: auto;"> 
+                 <input type="image" src="./img/engram.png" data-role="GrammarGPT"  onclick="inputTextByImage(this)" style="max-width: 10.047%;">
+                 <input type="image" src="./img/enarticle.png"  data-role="En_Essay_Reviser"  onclick="inputTextByImage(this)" style="max-width: 10.047%;">
+                <input type="image" src="./img/redbook.png"  data-role="Red Book"  onclick="inputTextByImage(this)" style="max-width: 11.912%;">
+                <input type="image" src="./img/painter.png"  data-role="Painter"  onclick="inputTextByImage(this)" style="max-width: 4.756%;">
+                <input type="image" src="./img/python.png"  data-role="Python Engineer"  onclick="inputTextByImage(this)" style="max-width: 11.912%;">
+                 <input type="image" src="./img/var_namer.png"  data-role="Var_Namer"  onclick="inputTextByImage(this)" style="max-width: 10.047%;">
+                <input type="image" src="./img/tarot.png"  data-role="Tarot_Reader"  onclick="inputTextByImage(this)" style="max-width: 9.204%;">
+                <input type="image" src="./img/podcast_writer.png"  data-role="Podcast_Writer"  onclick="inputTextByImage(this)" style="max-width: 11.912%;"> 
+		<input type="image" src="./img/legal_advisor.png"  data-role="Legal_Advisor"  onclick="inputTextByImage(this)" style="max-width: 7.4%;"> 
             </div>
             <div style="text-align: center;">
             <a href="./prompt.html" target="_blank">
