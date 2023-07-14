@@ -1,7 +1,20 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
-
 <head>
+<script language="JavaScript">
+<!--
+
+var password = "123456"; //这里是密码
+password = prompt('请输入密码 (本网站需输入密码才可进入):','');
+if (password != '123456') {
+alert ("密码不正确,无法进入本站!!");
+window.opener=null;
+window.close ();
+}
+
+// 密码不正确就关闭
+//-->
+</script>
     <style>
         #images1 {
             white-space: nowrap;
